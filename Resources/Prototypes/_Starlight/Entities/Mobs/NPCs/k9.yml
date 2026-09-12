@@ -4,6 +4,7 @@
   name: security K9
   description: A dog trained for station security work.
   components:
+  - type: RemoveFlavorText
   - type: Sprite
     drawdepth: Mobs
     sprite: _Starlight/Mobs/Pets/k9.rsi
@@ -12,10 +13,11 @@
       state: k9-brown
   - type: LanguageKnowledge
     speaks:
-    - Dog
+    - DogFeral # This language grant is intentional; K9s are meant to have communication challenges
     understands:
     - GalacticCommon
     - Dog
+    - DogFeral
     - Canilunzt
   - type: LanguageGrantImmune
   - type: Inventory
@@ -50,6 +52,7 @@
   - type: RandomMetadata
     nameSegments:
     - NamesCorgi
+  - type: AlwaysIdentifiable
   - type: Grammar
     attributes:
       gender: epicene
@@ -64,6 +67,7 @@
     - External
     - Cryogenics
   - type: StatusIcon
+  - type: JobStatus
   - type: FixedJobIcon
     job: K9
   - type: SpriteVariant
@@ -99,6 +103,7 @@
     tags:
     - DogEmotes
     - DoorBumpOpener
+    - VimPilot
   - type: AlwaysRevolutionaryConvertible
   - type: CanEnterCryostorage
   - type: Zoomies
